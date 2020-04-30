@@ -40,6 +40,7 @@ import org.openjdk.jcstress.infra.results.I_Result;
 public class ConcurrencyTest {
 
     int num = 0;
+    // volatile 禁止指令重排
     volatile boolean ready = false;
     @Actor
     public void actor1(I_Result r) {
